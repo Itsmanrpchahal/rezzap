@@ -175,15 +175,19 @@ class _ResumePopUpState extends State<ResumePopUp> {
     final FormState form = _formKey.currentState;
     if (form.validate()) {
       if (widget.resumeId == "0") {
-        addResume(
-            nameController.text,
-            emailController.text,
-            phoneController.text,
-            profileController.text,
-            categoryController.text,
-            activityController.text,
-            supporterController.text,
-            interestController.text);
+        if (interestList.isEmpty) {
+          EasyLoading.showError("Add Interest for adding resume");
+        } else {
+          addResume(
+              nameController.text,
+              emailController.text,
+              phoneController.text,
+              profileController.text,
+              categoryController.text,
+              activityController.text,
+              supporterController.text,
+              interestController.text);
+        }
       } else {
         updateResume(
             widget.resumeId,

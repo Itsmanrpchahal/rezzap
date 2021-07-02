@@ -246,7 +246,7 @@ class _MyResumeState extends State<MyResume> {
                                               height: 3,
                                             ),
                                             Text(
-                                              "view more",
+                                              "view less",
                                               style: GoogleFonts.lato(
                                                   fontSize: 16,
                                                   color: Colors.white),
@@ -259,7 +259,7 @@ class _MyResumeState extends State<MyResume> {
                   },
                 )
               : Container(
-                alignment: Alignment.center,
+                  alignment: Alignment.center,
                   margin: EdgeInsets.only(
                       top: MediaQuery.of(context).size.height / 2 - 100),
                   child: Text(
